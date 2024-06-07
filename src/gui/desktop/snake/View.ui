@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>View</class>
+ <widget class="QWidget" name="View">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>View</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="Menu">
+    <widget class="QLabel" name="brickGame">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>401</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>43</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Brick Game</string>
+     </property>
+     <property name="margin">
+      <number>30</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="snakeBtn">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>190</y>
+       <width>251</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>36</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(130, 170, 90);
+border: none;
+color: rgb(226, 234, 216);
+border-left: 1px solid rgb(110, 144, 76); 
+border-right: 1px solid rgb(110, 144, 76); 
+border-bottom: 5px sold rgb(110, 144, 76);	
+border-radius: 10px;
+}
+
+QPushButton:hover {
+ background-color: rgb(138, 181, 96);
+ border left: 1px solid.rgb(110, 144, 76);
+ border-right: 1px solid rgb(110, 144, 76);
+ border-bottom: 5px solid rgb(110, 144, 76);
+border-radius: 10px;
+}
+
+QPushButton:pressed {
+background-color: rgb(120, 157, 83); 
+border-left: 1px solid rgb(110, 144, 76);
+border-right: 1px solid rgb(110, 144, 76); 
+border-top: 5px solid rgb(110, 144, 76);
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Snake</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="tetrisBtn">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>320</y>
+       <width>251</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>36</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(130, 170, 90);
+border: none;
+color: rgb(226, 234, 216);
+border-left: 1px solid rgb(110, 144, 76); 
+border-right: 1px solid rgb(110, 144, 76); 
+border-bottom: 5px sold rgb(110, 144, 76);	
+border-radius: 10px;
+}
+
+QPushButton:hover {
+ background-color: rgb(138, 181, 96);
+ border left: 1px solid.rgb(110, 144, 76);
+ border-right: 1px solid rgb(110, 144, 76);
+ border-bottom: 5px solid rgb(110, 144, 76);
+border-radius: 10px;
+}
+
+QPushButton:pressed {
+background-color: rgb(120, 157, 83); 
+border-left: 1px solid rgb(110, 144, 76);
+border-right: 1px solid rgb(110, 144, 76); 
+border-top: 5px solid rgb(110, 144, 76);
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Tetris</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="exitBtn">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>460</y>
+       <width>251</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>36</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(255, 70, 90);
+border: none;
+color: rgb(226, 234, 216);
+border-left: 1px solid rgb(110, 144, 76); 
+border-right: 1px solid rgb(110, 144, 76); 
+border-bottom: 5px sold rgb(110, 144, 76);	
+}
+
+QPushButton:hover {
+ background-color: rgb(255, 10, 96);
+ border left: 1px solid.rgb(110, 144, 76);
+ border-right: 1px solid rgb(110, 144, 76);
+ border-bottom: 5px solid rgb(110, 144, 76);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 0, 83); 
+border-left: 1px solid rgb(110, 144, 76);
+border-right: 1px solid rgb(110, 144, 76); 
+border-top: 5px solid rgb(110, 144, 76);
+}</string>
+     </property>
+     <property name="text">
+      <string>EXIT</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TetrisGame">
+    <widget class="QWidget" name="TetrisGameField" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>300</width>
+       <height>600</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    border: 2px solid black;
+	
+}</string>
+     </property>
+     <widget class="QLabel" name="TetrisInfoLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>271</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+    border: 2px solid black;
+}</string>
+      </property>
+      <property name="text">
+       <string>lol</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="TetrisLabel">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>10</y>
+       <width>141</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 600 30pt &quot;Cascadia Code&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>Tetris</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>350</y>
+       <width>211</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="1" column="0">
+       <widget class="QLabel" name="lvlLabel_tetris">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="scoreLabel_tetris">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Score</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="score_tetris">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="bestScoreLabel_tetris">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Best score</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="bestScore_tetris">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="lvl_tetris">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="TetrisGameField_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>95</y>
+       <width>165</width>
+       <height>165</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    border: 2px solid black;
+
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nextLabel">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>270</y>
+       <width>171</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>14</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 600 14pt &quot;Cascadia Code&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>Next tetronimo</string>
+     </property>
+    </widget>
+    <zorder>TetrisLabel</zorder>
+    <zorder>gridLayoutWidget_2</zorder>
+    <zorder>nextLabel</zorder>
+    <zorder>TetrisGameField</zorder>
+    <zorder>TetrisGameField_2</zorder>
+   </widget>
+   <widget class="QWidget" name="End">
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>30</y>
+       <width>481</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="gameStatus">
+        <property name="font">
+         <font>
+          <pointsize>30</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>GAME OVER</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="1">
+         <widget class="QLabel" name="bestScore_end">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="scoreLabel_end">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Your score</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="score_end">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="bestScoreLabel_end">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Best score</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="again">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>300</y>
+       <width>251</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>36</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(130, 170, 90);
+border: none;
+color: rgb(226, 234, 216);
+border-left: 1px solid rgb(110, 144, 76); 
+border-right: 1px solid rgb(110, 144, 76); 
+border-bottom: 5px sold rgb(110, 144, 76);	
+border-radius: 10px;
+}
+
+QPushButton:hover {
+ background-color: rgb(138, 181, 96);
+ border left: 1px solid.rgb(110, 144, 76);
+ border-right: 1px solid rgb(110, 144, 76);
+ border-bottom: 5px solid rgb(110, 144, 76);
+border-radius: 10px;
+}
+
+QPushButton:pressed {
+background-color: rgb(120, 157, 83); 
+border-left: 1px solid rgb(110, 144, 76);
+border-right: 1px solid rgb(110, 144, 76); 
+border-top: 5px solid rgb(110, 144, 76);
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Retry</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="exitButton">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>450</y>
+       <width>251</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>36</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(255, 70, 90);
+border: none;
+color: rgb(226, 234, 216);
+border-left: 1px solid rgb(110, 144, 76); 
+border-right: 1px solid rgb(110, 144, 76); 
+border-bottom: 5px sold rgb(110, 144, 76);	
+}
+
+QPushButton:hover {
+ background-color: rgb(255, 10, 96);
+ border left: 1px solid.rgb(110, 144, 76);
+ border-right: 1px solid rgb(110, 144, 76);
+ border-bottom: 5px solid rgb(110, 144, 76);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 0, 83); 
+border-left: 1px solid rgb(110, 144, 76);
+border-right: 1px solid rgb(110, 144, 76); 
+border-top: 5px solid rgb(110, 144, 76);
+}</string>
+     </property>
+     <property name="text">
+      <string>EXIT</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="SnakeGame">
+    <widget class="QWidget" name="GameField" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>300</width>
+       <height>600</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    border: 2px solid black;
+
+}</string>
+     </property>
+     <widget class="QLabel" name="SnakeInfoLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>271</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+    border: 2px solid black;
+}</string>
+      </property>
+      <property name="text">
+       <string>lol</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="snakeLabel">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>20</y>
+       <width>161</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 600 30pt &quot;Cascadia Code&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>Snake🐍</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>110</y>
+       <width>201</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0">
+       <widget class="QLabel" name="lvlLabel">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="scoreLabel">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Score</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="score_snake">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="bestScoreLabel_snake">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Best score</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="bestScore_snake">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="lvl_snake">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <zorder>snakeLabel</zorder>
+    <zorder>gridLayoutWidget</zorder>
+    <zorder>GameField</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
