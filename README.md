@@ -1,6 +1,17 @@
 # NeoSnake
 
-NeoSnake is a set of classic games that includes the snake game and bonus Tetris. The program is developed in C++ using the C++17 standard.
+NeoSnake is a set of classic games that includes the snake game and bonus Tetris. As per the assignment, an enhanced version of classic games, Snake and Tetris, was developed using C++ and OOP principles using the C++17 standard.
+
+The project follows the MVC pattern, with a clear separation between game logic and the graphical interface. For the visual part of the project, both the Qt framework, which provides a user-friendly interface and smooth animations, and a console interface for displaying the game can be used. The design ensures that the game logic is modular and easy to maintain, allowing for future enhancements and modifications.
+
+## Contents
+
+1. [Requirements](#requirements)
+2. [Project Structure](#project-structure)
+3. [Usage](#usage)
+4. [Gameplay](#gameplay)
+5. [Testing](#testing)
+6. [Finite State Machine Diagram](#finite-state-machine-diagram)
 
 ## Requirements
 
