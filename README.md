@@ -33,12 +33,15 @@ Launch the desktop version of the game:
   cd src
   make desktop 
 ```
+![2024-06-27 17-14-20 (online-video-cutter com)](https://github.com/BulatRuslanovich/neo_snake/assets/113189826/2827ab57-19a2-4549-9bdb-8774813b78f0)
+
 
 Launch the console version of the game:
 ```bash
   cd src
   make cli 
 ```
+![2024-06-27 17-14-20 (online-video-cutter com) (1)](https://github.com/BulatRuslanovich/neo_snake/assets/113189826/d4373638-89e4-42ea-9bd9-4e41a9fb1d03)
 
 ## Gameplay
 
