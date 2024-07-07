@@ -1,9 +1,7 @@
 #include "SnakeConsoleView.h"
 
-//!
 s21::SnakeConsoleView::SnakeConsoleView(s21::SnakeController *controller) : action(PlayerAction::DEFAULT), snakeData(), snakeController(controller) {}
 
-//!
 void s21::SnakeConsoleView::Start() {
     nodelay(stdscr, TRUE);
     snakeController->SetModelDataDefault();
@@ -15,7 +13,6 @@ void s21::SnakeConsoleView::Start() {
     }
 }
 
-//!
 void s21::SnakeConsoleView::Rendering() {
     if (snakeData->state == State::START) {
         StartGameRendering();
@@ -26,7 +23,6 @@ void s21::SnakeConsoleView::Rendering() {
     }
 }
 
-//!
 void s21::SnakeConsoleView::SnakeMainLoop() {
     while (snakeData->state != State::GAME_OVER && snakeData->state != State::EXIT) {
         if (snakeData->isChanged) {
@@ -39,7 +35,6 @@ void s21::SnakeConsoleView::SnakeMainLoop() {
     }
 }
 
-//!
 void s21::SnakeConsoleView::ModelConnect() {
     snakeController->UpdateModelData(action);
     snakeData = &snakeController->GetModelData();
@@ -49,12 +44,12 @@ void s21::SnakeConsoleView::ModelConnect() {
 void s21::SnakeConsoleView::GameRendering() {
     clear();
     attron(COLOR_PAIR(1));
-    mvprintw(snakeData->applePosition.y + 1, snakeData->applePosition.x + 1, "%c", ACS_PI);
+    mvprintw(snakeData->applePosition.y + 1, (snakeData->applePosition.x * 2) + 1, "%c%c", ACS_PI, ACS_PI);
     attroff(COLOR_PAIR(1));
 
     attron(COLOR_PAIR(2));
     for (const auto& i : snakeData->snakePosition) {
-        mvprintw(i.y + 1, i.x + 1, "%c", 'S');
+        mvprintw(i.y + 1, (i.x * 2) + 1, "%c%c", 'S', 'S');
     }
     attroff(COLOR_PAIR(2));
 

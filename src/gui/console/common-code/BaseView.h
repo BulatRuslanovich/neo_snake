@@ -32,7 +32,7 @@ namespace s21 {
     public:
         virtual void Start() = 0;
 
-        static void DrawBox(int topLeftY, int topLeftX, int bottomRightY, int bottomRightX);
+        static void DrawBox(int topLeftY, float topLeftX, int bottomRightY, float bottomRightX);
         static void GameFieldRendering(Choose currentGame, int lvl, int score, int record);
         static void GameResultRendering(bool inWin, int lvl, int score);
         static void PauseRendering(int level, int score);

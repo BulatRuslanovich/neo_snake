@@ -32,7 +32,6 @@ void s21::TetrisConsoleView::TetrisMainLoop() {
 void s21::TetrisConsoleView::ModelConnect() {
     tetrisController->UpdateModelData(action);
     tetrisData = &tetrisController->GetModelData();
-//    TetrisData tmp_data = tetrisController->GetModelData();
     action = PlayerAction::DEFAULT;
 }
 
@@ -43,19 +42,19 @@ void s21::TetrisConsoleView::GameRendering() {
 
     for (const auto &item : tetrisData->projectionTetromino.GetPosition()) {
         attron(COLOR_PAIR(8));
-        mvprintw(item.y, item.x + 1, ".");
+        mvprintw(item.y, item.x * 2 + 1, "..");
         attroff(COLOR_PAIR(8));
     }
 
     for (const auto &item : tetrisData->currentTetromino.GetPosition()) {
         attron(COLOR_PAIR((short)tetrisData->currentTetromino.GetShape()));
-        mvprintw(item.y, item.x + 1, ".");
+        mvprintw(item.y, item.x * 2 + 1, "..");
         attroff(COLOR_PAIR((short)tetrisData->currentTetromino.GetShape()));
     }
 
     for (const auto &item : tetrisData->nextTetromino.GetPosition()) {
         attron(COLOR_PAIR((short)tetrisData->nextTetromino.GetShape()));
-        mvprintw(item.y + 1, item.x + 11, ".");
+        mvprintw(item.y + 1, item.x * 2 + 22, "..");
         attroff(COLOR_PAIR((short)tetrisData->nextTetromino.GetShape()));
     }
 
@@ -63,7 +62,7 @@ void s21::TetrisConsoleView::GameRendering() {
         for (int j = 0; j < Properties::FIELD_WIDTH; ++j) {
             attron(COLOR_PAIR(tetrisData->tetrisField[i][j].second));
 
-            if (tetrisData->tetrisField[i][j].first) mvprintw(i + 1, j + 1, ".");
+            if (tetrisData->tetrisField[i][j].first) mvprintw(i + 1, j * 2 + 1, "..");
 
             attroff(COLOR_PAIR(tetrisData->tetrisField[i][j].second));
         }
