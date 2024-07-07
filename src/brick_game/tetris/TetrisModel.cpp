@@ -3,11 +3,11 @@
 s21::TetrisModel::TetrisModel() {
     tetrisData.tetrisField.resize(Properties::FIELD_HEIGHT, std::vector<std::pair<bool, int>>(Properties::FIELD_WIDTH, {false, 0}));
     SetDefaultData();
-    tetrisData.bestScore = LoadScore(Properties::FILE_NAME);
+    tetrisData.bestScore = LoadScore(Properties::TETRIS_FILE_NAME);
 }
 
 s21::TetrisModel::~TetrisModel() {
-    SaveScore(tetrisData.bestScore, Properties::FILE_NAME);
+    SaveScore(tetrisData.bestScore, Properties::TETRIS_FILE_NAME);
 }
 
 void s21::TetrisModel::SetDefaultData() {

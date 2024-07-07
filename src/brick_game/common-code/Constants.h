@@ -4,7 +4,8 @@
 
 namespace s21 {
     namespace Properties {
-        static std::string FILE_NAME = "SnakeScore.txt";
+        static std::string SNAKE_FILE_NAME = "SnakeScore.txt";
+        static std::string TETRIS_FILE_NAME = "TetrisScore.txt";
         constexpr int MAX_SNAKE_LENGTH = 200;
         constexpr int FIELD_WIDTH = 10;
         constexpr int FIELD_HEIGHT = 20;

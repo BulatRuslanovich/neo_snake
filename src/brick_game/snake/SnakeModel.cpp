@@ -3,12 +3,12 @@
 namespace s21 {
     //!
     SnakeModel::SnakeModel() : snakeData() {
-        snakeData.bestScore = LoadScore(Properties::FILE_NAME);
+        snakeData.bestScore = LoadScore(Properties::SNAKE_FILE_NAME);
     }
 
     //!
     SnakeModel::~SnakeModel() {
-        SaveScore(snakeData.bestScore, Properties::FILE_NAME);
+        SaveScore(snakeData.bestScore, Properties::SNAKE_FILE_NAME);
         snakeData.snakePosition.clear();
     }
 
