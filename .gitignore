@@ -1,3 +1,9 @@
+#custom
+.idea/
+build/
+cmake-build-debug/
+SnakeScore.txt
+TetrisScore.txt
 # Prerequisites
 *.d
 
